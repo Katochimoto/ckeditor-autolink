@@ -166,7 +166,7 @@
         var linkEndsWithPunctuationMark = isLink && TRAILING_PUNCTUATION.exec(rangeString);
         if (linkEndsWithPunctuationMark) {
             var changedEndOffset = rangeNative.endOffset - linkEndsWithPunctuationMark[1].length;
-            // changedEndOffset will less then 0 if rangeNative contains not only TextNodes(e.g. HTMLImageElement)
+            // changedEndOffset will be less than 0 if rangeNative contains not only TextNodes(e.g. HTMLImageElement)
             if (changedEndOffset >= 0) {
                 rangeNative.setEnd(rangeNative.endContainer, changedEndOffset);
             }
